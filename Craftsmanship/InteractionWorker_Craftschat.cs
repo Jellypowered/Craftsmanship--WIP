@@ -31,6 +31,7 @@ namespace Craftsmanship
 			else
 			{
 				this._sharedPassion = this.GetSharedPassion(initiator, recipient);
+				//Log.Message(" Random Selection weight: Attempt to get shared passion. ",false);
 				bool flag2 = this._sharedPassion != null;
 				bool flag4 = flag2;
 				if (flag4)
@@ -62,13 +63,16 @@ namespace Craftsmanship
 			letterLabel = null;
 			lookTargets = null;
 			SkillRecord skill = this._sharedPassion.Master.skills.GetSkill(this._sharedPassion.Skill);
+			//Log.Message( "Master Skill Shared Passion: " + skill, false);
 			SkillRecord skill2 = this._sharedPassion.Student.skills.GetSkill(this._sharedPassion.Skill);
+			//Log.Message("Student Skill Shared Passion: " + skill2, false);
 			float xp = 200f;
 			bool studentIsScrub = this._sharedPassion.StudentIsScrub;
 			bool flag2 = studentIsScrub;
 			if (flag2)
 			{
 				xp = skill2.XpRequiredForLevelUp * 0.33f;
+				//Log.Message("Student is a Scrub, gain more experience: " + xp.ToString(),false);
 			}
 			else
 			{
@@ -77,6 +81,7 @@ namespace Craftsmanship
 				if (flag3)
 				{
 					xp = skill2.XpRequiredForLevelUp * 0.15f;
+					//Log.Message("Student is Intermediate, gain less experience: " + xp.ToString(),false);
 				}
 			}
 			bool flag = skill2.Level >= 9;
@@ -84,6 +89,7 @@ namespace Craftsmanship
 			if (flag4)
 			{
 				xp = 10f;
+				//Log.Message("10 experience random chit chat" + xp.ToString(),false);
 			}
 
 			skill2.Learn(xp, false);
@@ -104,6 +110,7 @@ namespace Craftsmanship
 				bool flag4 = flag2;
 				if (flag4)
 				{
+					//Log.Message("We have a shared passion, now let's talk about it!", false);
 					return new InteractionWorker_Craftschat.SharedPassion(initiator, target, this.discussedSkill);
 				}
 			}
