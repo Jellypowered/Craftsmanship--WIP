@@ -37,8 +37,14 @@
     <Compile Include="CraftingInteractionDef.cs" />
     <Compile Include="InteractionWorker_Craftschat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="1SettingsHelper, Version=0.19.1.36477, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\1SettingsHelper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
   </ItemGroup>
   <ItemGroup>

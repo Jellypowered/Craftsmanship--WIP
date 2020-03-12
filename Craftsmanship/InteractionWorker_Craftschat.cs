@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 using RimWorld;
 using Verse;
+using UnityEngine;
+
 
 namespace Craftsmanship
 {
+	
 	// Token: 0x02000003 RID: 3
 	public class InteractionWorker_Craftschat : InteractionWorker
-	{
-		// Token: 0x17000001 RID: 1
-		// (get) Token: 0x06000002 RID: 2 RVA: 0x0000205C File Offset: 0x0000025C
+	{	
 		public SkillDef discussedSkill
 		{
 			get
-			{	
+			{
 				return ((CraftingInteractionDef)this.interaction).discussedSkill;
 			}
 		}
-
-		// Token: 0x06000003 RID: 3 RVA: 0x00002080 File Offset: 0x00000280
-		public override float RandomSelectionWeight(Pawn initiator, Pawn recipient)
+	
+	// Token: 0x06000003 RID: 3 RVA: 0x00002080 File Offset: 0x00000280
+	public override float RandomSelectionWeight(Pawn initiator, Pawn recipient)
 		{
 			bool flag = initiator.Faction != Faction.OfPlayer || recipient.Faction != Faction.OfPlayer;
 			bool flag3 = flag;
@@ -46,18 +47,10 @@ namespace Craftsmanship
 			return result;
 		}
 
-
-		
-		// Token: 0x06000004 RID: 4 RVA: 0x00002100 File Offset: 0x00000300
-		public override void Interacted
-			(Pawn initiator,
-			Pawn recipient,
-			List<RulePackDef> extraSentencePacks,
-			out string letterText,
-			out string letterLabel,
-			out LetterDef letterDef,
+		public override void Interacted (Pawn initiator, Pawn recipient,
+			List<RulePackDef> extraSentencePacks, out string letterText, out string letterLabel, out LetterDef letterDef,
 			out LookTargets lookTargets)
-		{
+		{	
 			letterText = null;
 			letterDef = null;
 			letterLabel = null;
@@ -111,7 +104,12 @@ namespace Craftsmanship
 				if (flag4)
 				{
 					//Log.Message("We have a shared passion, now let's talk about it!", false);
-					return new InteractionWorker_Craftschat.SharedPassion(initiator, target, this.discussedSkill);
+					int chance = Rand.Range(1, 100);
+					if (chance >= 25)
+					{
+						Log.Message("25% chance to get SharedPassion CraftsChat?" + chance.ToString(), true);
+						return new InteractionWorker_Craftschat.SharedPassion(initiator, target, this.discussedSkill);
+					}
 				}
 			}
 			return null;
@@ -219,4 +217,7 @@ namespace Craftsmanship
 			public SkillRecord StudentSkill;
 		}
 	}
+
 }
+
+
