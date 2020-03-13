@@ -6,8 +6,9 @@ namespace Craftsmanship
 {
     public class CraftsmahshipSettings : ModSettings
     {
-
         private static float chance = 1f;
+        public static float Chance => Mathf.Pow(chance, (chance < 1f) ? 1 : 2);
+        
         
         public void DoWindowContents(Rect wrect)
         {
@@ -21,8 +22,8 @@ namespace Craftsmanship
             options.Gap();
             // Same GUI colour as Merciless
             GUI.color = new Color(1f, 0.2f, 0.2f);
-            options.AddLabeledSlider("Settings_chance".Translate(), ref chance, 1, 100,
-                rightAlignedLabel: chance.ToStringByStyle(ToStringStyle.FloatTwo, ToStringNumberSense.Factor), roundTo: 0.01f);
+            options.AddLabeledSlider("Settings_Chance", ref chance, 1f, 2f,
+                rightAlignedLabel: Chance.ToStringByStyle(ToStringStyle.FloatTwo, ToStringNumberSense.Factor), roundTo: 0.01f);
             GUI.color = defaultColor;
             options.Gap();
             options.End();
@@ -33,7 +34,7 @@ namespace Craftsmanship
 
         public override void ExposeData()
         {
-            Scribe_Values.Look(ref chance, "Settings_chance", 1f);
+            Scribe_Values.Look(ref chance, "chance", 1f);
         }
 
     }
@@ -47,7 +48,7 @@ namespace Craftsmanship
             GetSettings<CraftsmahshipSettings>();
         }
 
-        public override string SettingsCategory() => "CraftsmanshipSettingsCategory".Translate();
+        public override string SettingsCategory() => "Craftsmanship Settings";
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
