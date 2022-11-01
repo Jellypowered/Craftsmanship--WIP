@@ -1,15 +1,13 @@
-﻿using System;
+﻿using RimWorld;
 using System.Collections.Generic;
-using RimWorld;
 using Verse;
-using UnityEngine;
 
 
 namespace Craftsmanship
 {
-	
-	// Token: 0x02000003 RID: 3
-	public class InteractionWorker_Craftschat : InteractionWorker
+
+    // Token: 0x02000003 RID: 3
+    public class InteractionWorker_Craftschat : InteractionWorker
 	{	
 		public SkillDef discussedSkill
 		{
@@ -107,7 +105,7 @@ namespace Craftsmanship
 					int chance = Rand.Range(1, 100);
 					if (chance >= 25)
 					{
-						Log.Message("25% chance to get SharedPassion CraftsChat?" + chance.ToString(), true);
+						//Log.Message("25% chance to get SharedPassion CraftsChat?" + chance.ToString());
 						return new InteractionWorker_Craftschat.SharedPassion(initiator, target, this.discussedSkill);
 					}
 				}
