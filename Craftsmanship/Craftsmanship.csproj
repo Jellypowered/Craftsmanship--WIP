@@ -25,7 +25,7 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\..\..\..\..\Program Files %28x86%29\Steam\steamapps\common\RimWorld\Mods\Craftsmanship\1.4\Assemblies\</OutputPath>
+    <OutputPath>F:\SteamLibrary\steamapps\common\RimWorld\Mods\Craftsmanship\1.5\Assemblies\</OutputPath>
     <DefineConstants>
     </DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -38,23 +38,14 @@
     <Compile Include="CraftingInteractionDef.cs" />
     <Compile Include="InteractionWorker_Craftschat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="1SettingsHelper, Version=0.19.1.36477, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Downloads\1SettingsHelper.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.4.3531</Version>
+      <Version>1.5.4062</Version>
     </PackageReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="1SettingsHelper.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
