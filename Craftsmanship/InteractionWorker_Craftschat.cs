@@ -2,220 +2,187 @@
 using System.Collections.Generic;
 using Verse;
 
-
 namespace Craftsmanship
 {
-
-    // Token: 0x02000003 RID: 3
     public class InteractionWorker_Craftschat : InteractionWorker
-	{	
-		public SkillDef discussedSkill
-		{
-			get
-			{
-				return ((CraftingInteractionDef)this.interaction).discussedSkill;
-			}
-		}
-	
-	// Token: 0x06000003 RID: 3 RVA: 0x00002080 File Offset: 0x00000280
-	public override float RandomSelectionWeight(Pawn initiator, Pawn recipient)
-		{
-			bool flag = initiator.Faction != Faction.OfPlayer || recipient.Faction != Faction.OfPlayer;
-			bool flag3 = flag;
-			float result;
-			if (flag3)
-			{
-				result = 0f;
-			}
-			else
-			{
-				this._sharedPassion = this.GetSharedPassion(initiator, recipient);
-				//Log.Message(" Random Selection weight: Attempt to get shared passion. ",false);
-				bool flag2 = this._sharedPassion != null;
-				bool flag4 = flag2;
-				if (flag4)
-				{
-					result = this._sharedPassion.DiscussionWeight;
-				}
-				else
-				{
-					result = 0f;
-				}
-			}
-			return result;
-		}
+    {
+        // Defines the skill that this interaction is focused on
+        public SkillDef DiscussedSkill => ((CraftingInteractionDef)this.interaction).discussedSkill;
 
-		public override void Interacted (Pawn initiator, Pawn recipient,
-			List<RulePackDef> extraSentencePacks, out string letterText, out string letterLabel, out LetterDef letterDef,
-			out LookTargets lookTargets)
-		{	
-			letterText = null;
-			letterDef = null;
-			letterLabel = null;
-			lookTargets = null;
-			SkillRecord skill = this._sharedPassion.Master.skills.GetSkill(this._sharedPassion.Skill);
-			//Log.Message( "Master Skill Shared Passion: " + skill, false);
-			SkillRecord skill2 = this._sharedPassion.Student.skills.GetSkill(this._sharedPassion.Skill);
-			//Log.Message("Student Skill Shared Passion: " + skill2, false);
-			float xp = 200f;
-			bool studentIsScrub = this._sharedPassion.StudentIsScrub;
-			bool flag2 = studentIsScrub;
-			if (flag2)
-			{
-				xp = skill2.XpRequiredForLevelUp * 0.33f;
-				//Log.Message("Student is a Scrub, gain more experience: " + xp.ToString(),false);
-			}
-			else
-			{
-				bool studentIsIntermediate = this._sharedPassion.StudentIsIntermediate;
-				bool flag3 = studentIsIntermediate;
-				if (flag3)
-				{
-					xp = skill2.XpRequiredForLevelUp * 0.15f;
-					//Log.Message("Student is Intermediate, gain less experience: " + xp.ToString(),false);
-				}
-			}
-			bool flag = skill2.Level >= 9;
-			bool flag4 = flag;
-			if (flag4)
-			{
-				xp = 10f;
-				//Log.Message("10 experience random chit chat" + xp.ToString(),false);
-			}
+        // Checks if a pawn can initiate an interaction by ensuring both can talk and hear each other.
+        public class CommunicationChecker
+        {
+            // Determines if two pawns can communicate.
+            public bool CanPawnsCommunicate(Pawn initiator, Pawn recipient)
+            {
+                return CanPawnTalk(initiator) && CanPawnHear(recipient);
+            }
 
-			skill2.Learn(xp, false);
+            // Checks if a pawn can speak.
+            private bool CanPawnTalk(Pawn pawn)
+            {
+                return pawn.health.capacities.CapableOf(PawnCapacityDefOf.Talking);
+            }
+
+            // Checks if a pawn can hear.
+            private bool CanPawnHear(Pawn pawn)
+            {
+                return pawn.health.capacities.CapableOf(PawnCapacityDefOf.Hearing);
+            }
+        }
+
+        // Internal multiplier to globally reduce interaction frequency (e.g., 0.3 = 30% of original chance).
+        private const float BaseInteractionMultiplier = 0.3f;
+
+        // Determines the likelihood of this interaction being selected.
+        public override float RandomSelectionWeight(Pawn initiator, Pawn recipient)
+        {
+            // Create an instance of CommunicationChecker to check communication capabilities.
+            var comms = new CommunicationChecker();
+
+            // Skip if pawns can't communicate.
+            if (!comms.CanPawnsCommunicate(initiator, recipient))
+                return 0f;
+
+            // Only allow player-faction colonists to participate
+            if (initiator.Faction != Faction.OfPlayer || recipient.Faction != Faction.OfPlayer)
+                return 0f;
+
+            // Check for valid shared passion, return its weight if found
+            var sharedPassion = GetSharedPassion(initiator, recipient);
+            
+            // Apply internal multiplier here to reduce overall frequency
+            return (sharedPassion?.DiscussionWeight ?? 0f) * BaseInteractionMultiplier;
+        }
+
+        // Runs when the interaction actually happens
+        public override void Interacted(Pawn initiator, Pawn recipient,
+            List<RulePackDef> extraSentencePacks, out string letterText, out string letterLabel,
+            out LetterDef letterDef, out LookTargets lookTargets)
+        {
+            letterText = null;
+            letterDef = null;
+            letterLabel = null;
+            lookTargets = null;
+
+            // Get skill relationship between initiator and recipient
+            var sharedPassion = new SharedPassion(initiator, recipient, DiscussedSkill);
+            var studentSkill = sharedPassion.StudentSkill;
+
+            // Base XP amount
+            float xp = 200f;
+
+            // Adjust XP based on relative skill level
+            if (sharedPassion.StudentIsScrub)
+                xp = studentSkill.XpRequiredForLevelUp * 0.33f;
+            else if (sharedPassion.StudentIsIntermediate)
+                xp = studentSkill.XpRequiredForLevelUp * 0.15f;
+
+            // Reduce XP if student is already skilled
+            if (studentSkill.Level >= 9)
+                xp = 10f;
+
+            // 🔧 Apply XP multiplier from mod settings
+            xp *= CraftsmanshipMod.Settings.xpMultiplier;
+
+            // Apply the learning
+            studentSkill.Learn(xp, false);
+
+            // Apply the CraftChat thought to both pawns
+            if (CraftsmanshipMod.Settings.socialBuff)
+            {
+                ThoughtDef craftChatThought = DefDatabase<ThoughtDef>.GetNamed("CraftChat", false);
+                if (craftChatThought != null)
+                {
+                    initiator.needs?.mood?.thoughts?.memories?.TryGainMemory(craftChatThought, recipient); 
+                    recipient.needs?.mood?.thoughts?.memories?.TryGainMemory(craftChatThought, initiator);
+                }
+            }
+
+            // Skip generic sentence packs
             extraSentencePacks.Clear();
-			}
+        }
 
-		// Token: 0x06000005 RID: 5 RVA: 0x000021DC File Offset: 0x000003DC
-		private InteractionWorker_Craftschat.SharedPassion GetSharedPassion(Pawn initiator, Pawn target)
-		{
-			SkillRecord skill = initiator.skills.GetSkill(this.discussedSkill);
-			bool flag = initiator.skills.GetSkill(this.discussedSkill) != null && !skill.TotallyDisabled;  
-				//skill.passion != null && !skill.TotallyDisabled;
-			bool flag3 = flag;
-			if (flag3)
-			{
-				SkillRecord skill2 = target.skills.GetSkill(this.discussedSkill);
-				bool flag2 = target.skills.GetSkill(this.discussedSkill) != null && !skill2.TotallyDisabled;
-				bool flag4 = flag2;
-				if (flag4)
-				{
-					//Log.Message("We have a shared passion, now let's talk about it!", false);
-					int chance = Rand.Range(1, 100);
-					if (chance >= 25)
-					{
-						//Log.Message("25% chance to get SharedPassion CraftsChat?" + chance.ToString());
-						return new InteractionWorker_Craftschat.SharedPassion(initiator, target, this.discussedSkill);
-					}
-				}
-			}
-			return null;
-		}
+        // Determines if the two pawns can have a meaningful skill discussion
+        private SharedPassion GetSharedPassion(Pawn initiator, Pawn target)
+        {
+            var initiatorSkill = initiator.skills.GetSkill(DiscussedSkill);
+            var targetSkill = target.skills.GetSkill(DiscussedSkill);
 
-		// Token: 0x04000002 RID: 2
-		private InteractionWorker_Craftschat.SharedPassion _sharedPassion;
+            // Must both have the skill and it must not be disabled
+            if (initiatorSkill == null || initiatorSkill.TotallyDisabled) return null;
+            if (targetSkill == null || targetSkill.TotallyDisabled) return null;
 
-		// Token: 0x02000004 RID: 4
-		private class SharedPassion
-		{
-			// Token: 0x06000007 RID: 7 RVA: 0x0000226C File Offset: 0x0000046C
-			public SharedPassion(Pawn pawnA, Pawn pawnB, SkillDef skill)
-			{
-				this.Skill = skill;
-				SkillRecord skill2 = pawnA.skills.GetSkill(skill);
-				SkillRecord skill3 = pawnB.skills.GetSkill(skill);
-				bool flag = skill2.Level >= skill3.Level;
-				bool flag2 = flag;
-				if (flag2)
-				{
-					this.Master = pawnA;
-					this.MasterSkill = skill2;
-					this.Student = pawnB;
-					this.StudentSkill = skill3;
-				}
-				else
-				{
-					this.Master = pawnA;
-					this.MasterSkill = skill2;
-					this.Student = pawnB;
-					this.StudentSkill = skill3;
-				}
-			}
+            // Both pawns must have at least minor passion for the skill
+            if (CraftsmanshipMod.Settings.requirePassion)
+            {
+                bool initiatorHasPassion = initiatorSkill.passion != Passion.None;
+                bool targetHasPassion = targetSkill.passion != Passion.None;
+                if (!initiatorHasPassion || !targetHasPassion) return null;
+            }
 
-			// Token: 0x17000002 RID: 2
-			// (get) Token: 0x06000008 RID: 8 RVA: 0x000022F8 File Offset: 0x000004F8
-			public bool StudentIsScrub
-			{
-				get
-				{
-					return (float)this.StudentSkill.Level < (float)this.MasterSkill.Level * 0.33f;
-				}
-			}
+            // Roll chance based on mod setting
+            float chance = CraftsmanshipMod.Settings?.chancePercent ?? 100f;
+            if (Rand.Value * 100f <= chance)
+            {
+                return new SharedPassion(initiator, target, DiscussedSkill);
+            }
 
-			// Token: 0x17000003 RID: 3
-			// (get) Token: 0x06000009 RID: 9 RVA: 0x0000232C File Offset: 0x0000052C
-			public bool StudentIsIntermediate
-			{
-				get
-				{
-					return (float)this.StudentSkill.Level < (float)this.MasterSkill.Level * 0.66f && (float)this.StudentSkill.Level > (float)this.MasterSkill.Level * 0.33f;
-				}
-			}
+            return null;
+        }
 
-			// Token: 0x17000004 RID: 4
-			// (get) Token: 0x0600000A RID: 10 RVA: 0x00002384 File Offset: 0x00000584
-			public int LevelDiff
-			{
-				get
-				{
-					return this.MasterSkill.Level - this.StudentSkill.Level;
-				}
-			}
+        // Represents the relationship between two pawns who share a skill passion
+        private class SharedPassion
+        {
+            public SkillDef Skill { get; }
+            public Pawn Master { get; }
+            public Pawn Student { get; }
+            public SkillRecord MasterSkill { get; }
+            public SkillRecord StudentSkill { get; }
 
-			// Token: 0x17000005 RID: 5
-			// (get) Token: 0x0600000B RID: 11 RVA: 0x000023B0 File Offset: 0x000005B0
-			public float DiscussionWeight
-			{
-				get
-				{
-					float num = 0.12f;
-					bool studentIsScrub = this.StudentIsScrub;
-					bool flag = studentIsScrub;
-					if (flag)
-					{
-						num += 2f;
-					}
-					else
-					{
-						bool studentIsIntermediate = this.StudentIsIntermediate;
-						bool flag2 = studentIsIntermediate;
-						if (flag2)
-						{
-							num += 1f;
-						}
-					}
-					return num;
-				}
-			}
+            public SharedPassion(Pawn pawnA, Pawn pawnB, SkillDef skill)
+            {
+                Skill = skill;
+                var skillA = pawnA.skills.GetSkill(skill);
+                var skillB = pawnB.skills.GetSkill(skill);
 
-			// Token: 0x04000003 RID: 3
-			public SkillDef Skill;
+                // Higher-skilled pawn becomes the "teacher"
+                if (skillA.Level >= skillB.Level)
+                {
+                    Master = pawnA;
+                    MasterSkill = skillA;
+                    Student = pawnB;
+                    StudentSkill = skillB;
+                }
+                else
+                {
+                    Master = pawnB;
+                    MasterSkill = skillB;
+                    Student = pawnA;
+                    StudentSkill = skillA;
+                }
+            }
 
-			// Token: 0x04000004 RID: 4
-			public Pawn Master;
+            // Student is far behind
+            public bool StudentIsScrub => StudentSkill.Level < MasterSkill.Level * 0.33f;
 
-			// Token: 0x04000005 RID: 5
-			public Pawn Student;
+            // Student is moderately behind
+            public bool StudentIsIntermediate => StudentSkill.Level < MasterSkill.Level * 0.66f && !StudentIsScrub;
 
-			// Token: 0x04000006 RID: 6
-			public SkillRecord MasterSkill;
-
-			// Token: 0x04000007 RID: 7
-			public SkillRecord StudentSkill;
-		}
-	}
-
+            // Affects how likely this conversation is to occur
+            public float DiscussionWeight
+            {
+                get
+                {
+                    float weight = 0.12f;
+                    if (StudentIsScrub)
+                        weight += 2f;
+                    else if (StudentIsIntermediate)
+                        weight += 1f;
+                    return weight;
+                }
+            }
+        }
+    }
 }
-
 

@@ -37,7 +37,9 @@
   <ItemGroup>
     <Compile Include="CraftingInteractionDef.cs" />
     <Compile Include="InteractionWorker_Craftschat.cs" />
+    <Compile Include="Mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
