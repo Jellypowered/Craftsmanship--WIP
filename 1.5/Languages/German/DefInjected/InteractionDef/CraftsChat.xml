@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Random social interactions -->
+  <Craftschat_Animals.label>Tier-Chat</Craftschat_Animals.label>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [handlingtype] [animal].</Craftschat_Animals.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Animals.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen über</Craftschat_Animals.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.3>talkedabout-&gt;teilten Ansichten über</Craftschat_Animals.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Wissen über</Craftschat_Animals.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ideen über</Craftschat_Animals.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.6>handlingtype-&gt;das Trainieren von</Craftschat_Animals.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.7>handlingtype-&gt;das Zähmen von</Craftschat_Animals.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.8>animal-&gt;Pumas</Craftschat_Animals.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.9>animal-&gt;Alpakas</Craftschat_Animals.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.10>animal-&gt;Grizzlybären</Craftschat_Animals.logRulesInitiator.rulesStrings.10>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.11>animal-&gt;Waschbären</Craftschat_Animals.logRulesInitiator.rulesStrings.11>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.12>animal-&gt;Muffalos</Craftschat_Animals.logRulesInitiator.rulesStrings.12>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.13>animal-&gt;Dromedaren</Craftschat_Animals.logRulesInitiator.rulesStrings.13>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.14>animal-&gt;Emus</Craftschat_Animals.logRulesInitiator.rulesStrings.14>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.15>animal-&gt;Kobras</Craftschat_Animals.logRulesInitiator.rulesStrings.15>
+  <Craftschat_Animals.logRulesInitiator.rulesStrings.16>animal-&gt;Truthähnen</Craftschat_Animals.logRulesInitiator.rulesStrings.16>
+  <Craftschat_Artistic.label>Kunst-Chat</Craftschat_Artistic.label>
+  <Craftschat_Artistic.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] Bildhauerei.</Craftschat_Artistic.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Artistic.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Artistic.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Artistic.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen ein Wort über</Craftschat_Artistic.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Artistic.logRulesInitiator.rulesStrings.3>talkedabout-&gt;sprachen über</Craftschat_Artistic.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Artistic.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Ansichten über</Craftschat_Artistic.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Artistic.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Wissen über</Craftschat_Artistic.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Artistic.logRulesInitiator.rulesStrings.6>talkedabout-&gt;teilten Ideen über</Craftschat_Artistic.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Construction.label>Konstruktions-Chat</Craftschat_Construction.label>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [project].</Craftschat_Construction.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Construction.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen ein Wort über</Craftschat_Construction.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.3>talkedabout-&gt;sprachen über</Craftschat_Construction.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Ansichten über</Craftschat_Construction.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Wissen über</Craftschat_Construction.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.6>talkedabout-&gt;teilten Ideen über</Craftschat_Construction.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.7>project-&gt;Fallen</Craftschat_Construction.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.8>project-&gt;Türen</Craftschat_Construction.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.9>project-&gt;Wände</Craftschat_Construction.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.10>project-&gt;Batterien</Craftschat_Construction.logRulesInitiator.rulesStrings.10>
+  <Craftschat_Construction.logRulesInitiator.rulesStrings.11>project-&gt;Tische</Craftschat_Construction.logRulesInitiator.rulesStrings.11>
+  <Craftschat_Cooking.label>Koch-Chat</Craftschat_Cooking.label>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [cookingtopic].</Craftschat_Cooking.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Cooking.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen über</Craftschat_Cooking.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.3>talkedabout-&gt;teilten Ansichten über</Craftschat_Cooking.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Wissen über</Craftschat_Cooking.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ideen über</Craftschat_Cooking.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.6>cookingtopic-&gt;Küchenhygiene</Craftschat_Cooking.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.7>cookingtopic-&gt;das Braten von Fleisch</Craftschat_Cooking.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.8>cookingtopic-&gt;das Kochen</Craftschat_Cooking.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Cooking.logRulesInitiator.rulesStrings.9>cookingtopic-&gt;das Schneiden von Gemüse</Craftschat_Cooking.logRulesInitiator.rulesStrings.9>
+  <Craftschat.label>Handwerks-Chat</Craftschat.label>
+  <Craftschat.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] das Schneidern von [tailorTopic].</Craftschat.logRulesInitiator.rulesStrings.0>
+  <Craftschat.logRulesInitiator.rulesStrings.1>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] das Schmieden von [smithingTopic].</Craftschat.logRulesInitiator.rulesStrings.1>
+  <Craftschat.logRulesInitiator.rulesStrings.2>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] die Herstellung von [assemblyTopic].</Craftschat.logRulesInitiator.rulesStrings.2>
+  <Craftschat.logRulesInitiator.rulesStrings.3>talkedabout(p=4)-&gt;redeten über</Craftschat.logRulesInitiator.rulesStrings.3>
+  <Craftschat.logRulesInitiator.rulesStrings.4>talkedabout-&gt;sprachen über</Craftschat.logRulesInitiator.rulesStrings.4>
+  <Craftschat.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ansichten über</Craftschat.logRulesInitiator.rulesStrings.5>
+  <Craftschat.logRulesInitiator.rulesStrings.6>talkedabout-&gt;teilten Wissen über</Craftschat.logRulesInitiator.rulesStrings.6>
+  <Craftschat.logRulesInitiator.rulesStrings.7>talkedabout-&gt;teilten Ideen über</Craftschat.logRulesInitiator.rulesStrings.7>
+  <Craftschat.logRulesInitiator.rulesStrings.8>tailorTopic-&gt;Cowboyhüten</Craftschat.logRulesInitiator.rulesStrings.8>
+  <Craftschat.logRulesInitiator.rulesStrings.9>tailorTopic-&gt;T-Shirts</Craftschat.logRulesInitiator.rulesStrings.9>
+  <Craftschat.logRulesInitiator.rulesStrings.10>tailorTopic-&gt;Staubmäntel</Craftschat.logRulesInitiator.rulesStrings.10>
+  <Craftschat.logRulesInitiator.rulesStrings.11>smithingTopic-&gt;Langschwertern</Craftschat.logRulesInitiator.rulesStrings.11>
+  <Craftschat.logRulesInitiator.rulesStrings.12>smithingTopic-&gt;Messern</Craftschat.logRulesInitiator.rulesStrings.12>
+  <Craftschat.logRulesInitiator.rulesStrings.13>smithingTopic-&gt;Knüppeln</Craftschat.logRulesInitiator.rulesStrings.13>
+  <Craftschat.logRulesInitiator.rulesStrings.14>assemblyTopic-&gt;Schildgürteln</Craftschat.logRulesInitiator.rulesStrings.14>
+  <Craftschat.logRulesInitiator.rulesStrings.15>assemblyTopic-&gt;Komponenten</Craftschat.logRulesInitiator.rulesStrings.15>
+  <Craftschat.logRulesInitiator.rulesStrings.16>assemblyTopic-&gt;Rüstungen</Craftschat.logRulesInitiator.rulesStrings.16>
+  <Craftschat.logRulesInitiator.rulesStrings.17>assemblyTopic-&gt;Helmen</Craftschat.logRulesInitiator.rulesStrings.17>
+  <Craftschat_Plants.label>Pflanzen-Chat</Craftschat_Plants.label>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] das Ernten von [planttype].</Craftschat_Plants.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.1>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] das Säen von [planttype].</Craftschat_Plants.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.2>talkedabout(p=4)-&gt;redeten über</Craftschat_Plants.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.3>talkedabout-&gt;sprachen über</Craftschat_Plants.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Ansichten über</Craftschat_Plants.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Wissen über</Craftschat_Plants.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.6>talkedabout-&gt;teilten Ideen über</Craftschat_Plants.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.7>planttype-&gt;Heilwurzeln</Craftschat_Plants.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.8>planttype-&gt;Erdbeeren</Craftschat_Plants.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.9>planttype-&gt;Mais</Craftschat_Plants.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.10>planttype-&gt;Hopfen</Craftschat_Plants.logRulesInitiator.rulesStrings.10>
+  <Craftschat_Plants.logRulesInitiator.rulesStrings.11>planttype-&gt;Reis</Craftschat_Plants.logRulesInitiator.rulesStrings.11>
+  <Craftschat_Medicine.label>Medizin-Chat</Craftschat_Medicine.label>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [medicineTopic].</Craftschat_Medicine.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Medicine.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen über</Craftschat_Medicine.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.3>talkedabout-&gt;teilten Ansichten über</Craftschat_Medicine.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Wissen über</Craftschat_Medicine.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ideen über</Craftschat_Medicine.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.6>medicineTopic-&gt;medizinische Versorgungen</Craftschat_Medicine.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.7>medicineTopic-&gt;das Implantieren eines Holzbeines</Craftschat_Medicine.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.8>medicineTopic-&gt;das Implantieren von bionischen Teilen</Craftschat_Medicine.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.9>medicineTopic-&gt;das Amputieren von Gliedmaßen</Craftschat_Medicine.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Medicine.logRulesInitiator.rulesStrings.10>medicineTopic-&gt;das Behandeln von Grippe</Craftschat_Medicine.logRulesInitiator.rulesStrings.10>
+  <Craftschat_Meele.label>Nahkampf-Chat</Craftschat_Meele.label>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [meeleTopic].</Craftschat_Meele.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Meele.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen über</Craftschat_Meele.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.3>talkedabout-&gt;teilten Ansichten über</Craftschat_Meele.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Wissen über</Craftschat_Meele.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ideen über</Craftschat_Meele.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.6>meeleTopic-&gt;Schlägereien</Craftschat_Meele.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.7>meeleTopic-&gt;das Treffen von Gegnern</Craftschat_Meele.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.8>meeleTopic-&gt;die Vorteile vom Schwert</Craftschat_Meele.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.9>meeleTopic-&gt;die Vorteile vom Knüppel</Craftschat_Meele.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Meele.logRulesInitiator.rulesStrings.10>meeleTopic-&gt;das Verprügeln von Gegnern</Craftschat_Meele.logRulesInitiator.rulesStrings.10>
+  <Craftschat_Mining.label>Bergbau-Chat</Craftschat_Mining.label>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [mineralType].</Craftschat_Mining.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Mining.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen über</Craftschat_Mining.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.3>talkedabout-&gt;teilten Ansichten über</Craftschat_Mining.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Wissen über</Craftschat_Mining.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ideen über</Craftschat_Mining.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.6>mineralType-&gt;Golderz</Craftschat_Mining.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.7>mineralType-&gt;Silbererz</Craftschat_Mining.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.8>mineralType-&gt;Komprimierten Stahl</Craftschat_Mining.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.9>mineralType-&gt;Komprimierte Bauteile</Craftschat_Mining.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Mining.logRulesInitiator.rulesStrings.10>mineralType-&gt;Gesteine</Craftschat_Mining.logRulesInitiator.rulesStrings.10>
+  <Craftschat_Intellectual.label>Geistiger-Chat</Craftschat_Intellectual.label>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [intellectualTopic].</Craftschat_Intellectual.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Intellectual.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen über</Craftschat_Intellectual.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.3>talkedabout-&gt;teilten Ansichten über</Craftschat_Intellectual.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Wissen über</Craftschat_Intellectual.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ideen über</Craftschat_Intellectual.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.6>intellectualTopic-&gt;die aktuelle Forschung</Craftschat_Intellectual.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.7>intellectualTopic-&gt;Mathematik</Craftschat_Intellectual.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.8>intellectualTopic-&gt;Physik</Craftschat_Intellectual.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.9>intellectualTopic-&gt;rationales Denken</Craftschat_Intellectual.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.10>intellectualTopic-&gt;Drogensynthese</Craftschat_Intellectual.logRulesInitiator.rulesStrings.10>
+  <Craftschat_Intellectual.logRulesInitiator.rulesStrings.11>intellectualTopic-&gt;logische Fehlschlüsse</Craftschat_Intellectual.logRulesInitiator.rulesStrings.11>
+  <Craftschat_Shooting.label>Fernkampf-Chat</Craftschat_Shooting.label>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [shootingTopic].</Craftschat_Shooting.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Shooting.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen über</Craftschat_Shooting.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.3>talkedabout-&gt;teilten Ansichten über</Craftschat_Shooting.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Wissen über</Craftschat_Shooting.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ideen über</Craftschat_Shooting.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.6>shootingTopic-&gt;das Jagen</Craftschat_Shooting.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.7>shootingTopic-&gt;den Beschuss auf Gegner</Craftschat_Shooting.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.8>shootingTopic-&gt;Schiessübungen</Craftschat_Shooting.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Shooting.logRulesInitiator.rulesStrings.9>shootingTopic-&gt;die Gewehrwartung</Craftschat_Shooting.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Social.label>Sozialer-Chat</Craftschat_Social.label>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.0>r_logentry-&gt;[INITIATOR_nameDef] und [RECIPIENT_nameDef] [talkedabout] [socialTopic].</Craftschat_Social.logRulesInitiator.rulesStrings.0>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.1>talkedabout(p=4)-&gt;redeten über</Craftschat_Social.logRulesInitiator.rulesStrings.1>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.2>talkedabout-&gt;sprachen über</Craftschat_Social.logRulesInitiator.rulesStrings.2>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.3>talkedabout-&gt;teilten Ansichten über</Craftschat_Social.logRulesInitiator.rulesStrings.3>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.4>talkedabout-&gt;teilten Wissen übe</Craftschat_Social.logRulesInitiator.rulesStrings.4>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.5>talkedabout-&gt;teilten Ideen über</Craftschat_Social.logRulesInitiator.rulesStrings.5>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.6>socialTopic-&gt;Handelstechniken</Craftschat_Social.logRulesInitiator.rulesStrings.6>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.7>socialTopic-&gt;das Überzeugen von Gefangenen</Craftschat_Social.logRulesInitiator.rulesStrings.7>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.8>socialTopic-&gt;das Aufheitern von Freunden</Craftschat_Social.logRulesInitiator.rulesStrings.8>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.9>socialTopic-&gt;rhetorische Fragen</Craftschat_Social.logRulesInitiator.rulesStrings.9>
+  <Craftschat_Social.logRulesInitiator.rulesStrings.10>socialTopic-&gt;die Körpersprache</Craftschat_Social.logRulesInitiator.rulesStrings.10>
+</LanguageData>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Mod Name -->
+  <Craftsmanship>Craftsmanship</Craftsmanship>
+  <!-- Optional: Title/Header label for the settings window -->
+  <Craftsmanship_SettingsHeader>Craftsmanship Mod Settings</Craftsmanship_SettingsHeader>
+  <Craftsmanship_SettingsDescription>Pawns who share a passion may chat and train one another. These settings allow you to customize the frequency and benefit of those interactions.</Craftsmanship_SettingsDescription>
+  <!-- Settings Labels and Tooltips -->
+  <Craftsmanship_ChanceSettingLabel>Interaction Chance: {0}</Craftsmanship_ChanceSettingLabel>
+  <Craftsmanship_ChanceSettingTooltip>Determines how likely pawns are to engage in skill-based passion chats.
+    0% = Never happens. 100% = Always happens when conditions are met.</Craftsmanship_ChanceSettingTooltip>
+  <Craftsmanship_XPMultiplierLabel>XP Gain Multiplier: {0}</Craftsmanship_XPMultiplierLabel>
+  <Craftsmanship_XPMultiplierTooltip>Adjusts how much experience the student gains from a passion chat.
+    1.0x is the default value. Increase this to make skill sharing more impactful.</Craftsmanship_XPMultiplierTooltip>
+  <Craftsmanship_RequirePassionLabel>Require Shared Passion for Interaction</Craftsmanship_RequirePassionLabel>
+  <Craftsmanship_RequirePassionTooltip>When checked, pawns must both be passionate about the skill to chat about it. If unchecked, any skill discussion is allowed.</Craftsmanship_RequirePassionTooltip>
+  <Craftsmanship_SocialBuffLabel>Give social opinion buff after chatting?</Craftsmanship_SocialBuffLabel>
+  <Craftsmanship_SocialBuffTooltip>When enabled, pawns gain a positive opinion after chatting about shared/passionate skills, improving their relationship.</Craftsmanship_SocialBuffTooltip>
+</LanguageData>

@@ -1,11 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29806.167
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Craftsmanship", "Craftsmanship\Craftsmanship.csproj", "{27D3B286-622A-4F2E-B259-6FBF331A0DB5}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0A696D9-9C49-4B2E-B055-7506A7053FD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mod", ".vscode\Craftsmanship.csproj", "{BF6F91F1-EBA4-5DA6-C59D-92CD2808FD17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{27D3B286-622A-4F2E-B259-6FBF331A0DB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27D3B286-622A-4F2E-B259-6FBF331A0DB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27D3B286-622A-4F2E-B259-6FBF331A0DB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27D3B286-622A-4F2E-B259-6FBF331A0DB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF6F91F1-EBA4-5DA6-C59D-92CD2808FD17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF6F91F1-EBA4-5DA6-C59D-92CD2808FD17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF6F91F1-EBA4-5DA6-C59D-92CD2808FD17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF6F91F1-EBA4-5DA6-C59D-92CD2808FD17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8962AB32-CCA3-4E43-8365-27E870690617}
+		SolutionGuid = {74F3368E-0ABD-45C2-A9F6-FF8B5A876895}
 	EndGlobalSection
 EndGlobal

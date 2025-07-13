@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Random social interactions -->
+  <ThoughtDef>
+    <defName>CraftChat</defName>
+    <thoughtClass>Thought_MemorySocialCumulative</thoughtClass>
+    <durationDays>20</durationDays>
+    <stackLimit>9</stackLimit>
+    <maxCumulatedOpinionOffset>15</maxCumulatedOpinionOffset>
+    <stackLimitForSameOtherPawn>10</stackLimitForSameOtherPawn>
+    <stackedEffectMultiplier>0.9</stackedEffectMultiplier>
+    <nullifyingTraits>
+      <li>Psychopath</li>
+    </nullifyingTraits>
+    <stages>
+      <li>
+        <label>craft chat</label>
+        <baseOpinionOffset>3</baseOpinionOffset>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

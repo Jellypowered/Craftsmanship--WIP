@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- Random social interactions -->
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Animals</defName>
+    <label>Craftschat_Animals</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Animals</DiscussedSkill>
+    <symbol>Motes/Animals</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [handlingtype] [animal].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>handlingtype-&gt;training</li>
+        <li>handlingtype-&gt;taming</li>
+        <li>animal-&gt;Cougars</li>
+        <li>animal-&gt;Alpacas</li>
+        <li>animal-&gt;Grizzlies</li>
+        <li>animal-&gt;Racoons</li>
+        <li>animal-&gt;Muffalos</li>
+        <li>animal-&gt;Dromedaries</li>
+        <li>animal-&gt;Emus</li>
+        <li>animal-&gt;Cobras</li>
+        <li>animal-&gt;Turkeys</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Artistic</defName>
+    <label>Craftschat_Artistic</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Artistic</DiscussedSkill>
+    <symbol>Motes/Artistic</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] sculpturing.</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;shared a word about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Construction</defName>
+    <label>Craftschat_Construction</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Construction</DiscussedSkill>
+    <symbol>Motes/Construction</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] constructing [project].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;shared a word about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>project-&gt;Traps</li>
+        <li>project-&gt;Doors</li>
+        <li>project-&gt;Walls</li>
+        <li>project-&gt;Batteries</li>
+        <li>project-&gt;Batteries</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Cooking</defName>
+    <label>Craftschat_Cooking</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Cooking</DiscussedSkill>
+    <symbol>Motes/Cooking</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [cookingtopic].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>cookingtopic-&gt;kitchen hygiene</li>
+        <li>cookingtopic-&gt;roasting meat</li>
+        <li>cookingtopic-&gt;cooking</li>
+        <li>cookingtopic-&gt;cutting vegetables</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat</defName>
+    <label>Craftschat</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Crafting</DiscussedSkill>
+    <symbol>Motes/Crafting</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] tailoring [tailorTopic].</li>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] smithing [smithingTopic].</li>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] assembling [assemblyTopic].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>tailorTopic-&gt;cowboy hats</li>
+        <li>tailorTopic-&gt;T-shirts</li>
+        <li>tailorTopic-&gt;dusters</li>
+        <li>smithingTopic-&gt;longswords</li>
+        <li>smithingTopic-&gt;knifes</li>
+        <li>smithingTopic-&gt;maces</li>
+        <li>assemblyTopic-&gt;shield belts</li>
+        <li>assemblyTopic-&gt;components</li>
+        <li>assemblyTopic-&gt;body armours</li>
+        <li>assemblyTopic-&gt;helmets</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Plants</defName>
+    <label>Craftschat_Plants</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Plants</DiscussedSkill>
+    <symbol>Motes/Plants</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] harvesting [planttype].</li>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] sowing [planttype].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>planttype-&gt;Healroot</li>
+        <li>planttype-&gt;Strawberry</li>
+        <li>planttype-&gt;Corn</li>
+        <li>planttype-&gt;Hops</li>
+        <li>planttype-&gt;Rice</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Medicine</defName>
+    <label>Craftschat_Medicine</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Medicine</DiscussedSkill>
+    <symbol>Motes/Medicine</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [medicineTopic].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>medicineTopic-&gt;medicine types</li>
+        <li>medicineTopic-&gt;installing peglegs</li>
+        <li>medicineTopic-&gt;installing bionics</li>
+        <li>medicineTopic-&gt;amputating limps</li>
+        <li>medicineTopic-&gt;treating the flu</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Meele</defName>
+    <label>Craftschat_Meele</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Melee</DiscussedSkill>
+    <symbol>Motes/Meele</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [meeleTopic].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>meeleTopic-&gt;barfights</li>
+        <li>meeleTopic-&gt;hitting raiders</li>
+        <li>meeleTopic-&gt;advantages of swords</li>
+        <li>meeleTopic-&gt;advantages of clubs</li>
+        <li>meeleTopic-&gt;smacking raiders</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Mining</defName>
+    <label>Craftschat_Mining</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Mining</DiscussedSkill>
+    <symbol>Motes/Mining</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] mining [mineralType].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>mineralType-&gt;Gold</li>
+        <li>mineralType-&gt;Silver</li>
+        <li>mineralType-&gt;Steel</li>
+        <li>mineralType-&gt;Components</li>
+        <li>mineralType-&gt;Stones</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Intellectual</defName>
+    <label>Craftschat_Intellectual</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Intellectual</DiscussedSkill>
+    <symbol>Motes/Intellectual</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [intellectualTopic].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>intellectualTopic-&gt;the current research</li>
+        <li>intellectualTopic-&gt;Mathematics</li>
+        <li>intellectualTopic-&gt;Physics</li>
+        <li>intellectualTopic-&gt;rationality</li>
+        <li>intellectualTopic-&gt;Drug synthesis</li>
+        <li>intellectualTopic-&gt;logical fallacies</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Shooting</defName>
+    <label>Craftschat_Shooting</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Shooting</DiscussedSkill>
+    <symbol>Motes/Shooting</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [shootingTopic].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>shootingTopic-&gt;hunting</li>
+        <li>shootingTopic-&gt;shooting at raiders</li>
+        <li>shootingTopic-&gt;shooting excercies</li>
+        <li>shootingTopic-&gt;rifle maintenance</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+  <InteractionDef Class="Craftsmanship.CraftingInteractionDef">
+    <defName>Craftschat_Social</defName>
+    <label>Craftschat_Social</label>
+    <workerClass>Craftsmanship.InteractionWorker_Craftschat</workerClass>
+    <DiscussedSkill>Social</DiscussedSkill>
+    <symbol>Things/Mote/SpeechSymbols/Chitchat</symbol>
+    <initiatorThought>CraftChat</initiatorThought>
+    <initiatorXpGainSkill>Social</initiatorXpGainSkill>
+    <initiatorXpGainAmount>4</initiatorXpGainAmount>
+    <recipientThought>CraftChat</recipientThought>
+    <logRulesInitiator>
+      <rulesStrings>
+        <li>r_logentry-&gt;[INITIATOR_nameDef] and [RECIPIENT_nameDef] [talkedabout] [socialTopic].</li>
+        <li>talkedabout(p=4)-&gt;talked about</li>
+        <li>talkedabout-&gt;spoke about</li>
+        <li>talkedabout-&gt;exchanged views about</li>
+        <li>talkedabout-&gt;exchanged knowledge about</li>
+        <li>talkedabout-&gt;exchanged ideas about</li>
+        <li>socialTopic-&gt;trading techniques</li>
+        <li>socialTopic-&gt;convincing Prisoners</li>
+        <li>socialTopic-&gt;cheering up friends</li>
+        <li>socialTopic-&gt;rethoric</li>
+        <li>socialTopic-&gt;body language</li>
+      </rulesStrings>
+    </logRulesInitiator>
+  </InteractionDef>
+</Defs>
